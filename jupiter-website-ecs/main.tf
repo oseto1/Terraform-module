@@ -30,3 +30,9 @@ private_data_subnet_az1_id  = module.vpc.private_data_subnet_az1_id
 private_app_subnet_az2_id   = module.vpc.private_app_subnet_az2_id
 private_data_subnet_az2_id  = module.vpc.private_data_subnet_az2_id
   }
+
+module "security_group" {
+  source = "../modules/security-groups"
+  vpc_id = module.vpc.vpc_id
+
+}
