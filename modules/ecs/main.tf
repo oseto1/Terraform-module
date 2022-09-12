@@ -70,7 +70,7 @@ resource "aws_ecs_service" "ecs_service" {
   launch_type       = "FARGATE"
   cluster           = aws_ecs_cluster.ecs_cluster.id
   task_definition   = aws_ecs_task_definition.ecs_task_definition.arn
-  platform_version  = "latest"
+  platform_version  = "LATEST"
   desired_count     = 1
   deployment_minimum_healthy_percent = 100
   deployment_maximum_percent         = 200
